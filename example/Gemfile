@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+
+gem 'comfydeploy'
+# Add other gems as needed
+
+group :development, :test do
+  gem 'rspec'
+end

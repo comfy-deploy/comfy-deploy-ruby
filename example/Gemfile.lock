@@ -1,0 +1,54 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    comfydeploy (0.0.1)
+      faraday
+      faraday-multipart
+      rack
+      rake
+      sorbet
+    diff-lcs (1.5.1)
+    faraday (2.10.0)
+      faraday-net_http (>= 2.0, < 3.2)
+      logger
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
+    faraday-net_http (3.1.0)
+      net-http
+    logger (1.6.0)
+    multipart-post (2.4.1)
+    net-http (0.4.1)
+      uri
+    rack (3.1.7)
+    rake (13.2.1)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.0)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.1)
+    sorbet (0.5.11481)
+      sorbet-static (= 0.5.11481)
+    sorbet-static (0.5.11481-aarch64-linux)
+    sorbet-static (0.5.11481-universal-darwin)
+    sorbet-static (0.5.11481-x86_64-linux)
+    uri (0.13.0)
+
+PLATFORMS
+  aarch64-linux
+  universal-darwin
+  x86_64-linux
+
+DEPENDENCIES
+  comfydeploy
+  rspec
+
+BUNDLED WITH
+   2.5.14
