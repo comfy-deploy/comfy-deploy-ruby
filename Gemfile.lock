@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    comfydeploy (0.0.1)
+    comfydeploy (0.0.3)
       faraday
       faraday-multipart
       rack
@@ -59,6 +59,7 @@ GEM
       sorbet-static (= 0.5.11287)
     sorbet-runtime (0.5.11287)
     sorbet-static (0.5.11287-aarch64-linux)
+    sorbet-static (0.5.11287-universal-darwin)
     sorbet-static (0.5.11287-x86_64-linux)
     sorbet-static-and-runtime (0.5.11287)
       sorbet (= 0.5.11287)
@@ -89,11 +90,12 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  arm64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
-  minitest
   comfydeploy!
+  minitest
   rubocop
   sorbet-runtime
   tapioca

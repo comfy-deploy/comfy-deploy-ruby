@@ -11,7 +11,7 @@ module OpenApiSDK
   extend T::Sig
 
   SERVERS = [
-    'https:///api', 
+    'https://www.comfydeploy.com/api', 
   ].freeze
   # Contains the list of servers available to the SDK
 
@@ -38,9 +38,9 @@ module OpenApiSDK
       @security = security
       @language = 'ruby'
       @openapi_doc_version = '0.0.1'
-      @sdk_version = '0.0.1'
+      @sdk_version = '0.0.3'
       @gen_version = '2.372.3'
-      @user_agent = 'speakeasy-sdk/ruby 0.0.1 2.372.3 0.0.1 comfydeploy'
+      @user_agent = 'speakeasy-sdk/ruby 0.0.3 2.372.3 0.0.1 comfydeploy'
     end
 
     sig { returns([String, T::Hash[Symbol, String]]) }

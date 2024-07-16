@@ -20,8 +20,7 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 ## SDK Installation
 
 ```bash
-gem install specific_install
-gem specific_install  
+gem install comfydeploy
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -100,7 +99,7 @@ You can override the default server globally by passing a server index to the `s
 
 | # | Server | Variables |
 | - | ------ | --------- |
-| 0 | `https:///api` | None |
+| 0 | `https://www.comfydeploy.com/api` | None |
 
 
 

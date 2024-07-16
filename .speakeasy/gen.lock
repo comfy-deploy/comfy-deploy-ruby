@@ -5,8 +5,9 @@ management:
   docVersion: 0.0.1
   speakeasyVersion: 1.335.2
   generationVersion: 2.372.3
-  releaseVersion: 0.0.1
-  configChecksum: 2cab284cb9d4d439b78eb9cee2bdcdf3
+  releaseVersion: 0.0.3
+  configChecksum: 8985a1b13321a66e85b0f15eee1f86ef
+  published: true
 features:
   ruby:
     core: 3.2.15
