@@ -1,0 +1,15 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    comfydeploy-api:
+        inputs:
+            - location: https://www.comfydeploy.com/api/openapi.json
+        registry:
+            location: registry.speakeasyapi.dev/comfydeploy/comfydeploy/comfydeploy-api
+targets:
+    comfy-deploy:
+        target: ruby
+        source: comfydeploy-api
+        publish:
+            rubygems:
+                token: $rubygems_auth_token

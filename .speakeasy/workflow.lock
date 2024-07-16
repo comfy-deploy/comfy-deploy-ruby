@@ -1,0 +1,28 @@
+speakeasyVersion: 1.335.2
+sources:
+    comfydeploy-api:
+        sourceNamespace: comfydeploy-api
+        sourceRevisionDigest: sha256:240a94498c0efd9716523a28f37f709a2a34b58870e47011f54d54272064646e
+        sourceBlobDigest: sha256:3b49f1727392456143423117dd2254393d00b8c9699acd16a48ecd20c30f687d
+        tags:
+            - latest
+targets:
+    comfy-deploy:
+        source: comfydeploy-api
+        sourceNamespace: comfydeploy-api
+        sourceRevisionDigest: sha256:240a94498c0efd9716523a28f37f709a2a34b58870e47011f54d54272064646e
+        sourceBlobDigest: sha256:3b49f1727392456143423117dd2254393d00b8c9699acd16a48ecd20c30f687d
+        outLocation: /Users/bennykok/Documents/GitHub/comfy-deploy-ruby
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        comfydeploy-api:
+            inputs:
+                - location: https://www.comfydeploy.com/api/openapi.json
+            registry:
+                location: registry.speakeasyapi.dev/comfydeploy/comfydeploy/comfydeploy-api
+    targets:
+        comfy-deploy:
+            target: ruby
+            source: comfydeploy-api

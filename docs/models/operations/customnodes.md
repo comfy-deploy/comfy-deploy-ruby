@@ -1,0 +1,15 @@
+# CustomNodes
+
+
+## Fields
+
+| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `name`                                                                      | *::String*                                                                  | :heavy_check_mark:                                                          | N/A                                                                         |
+| `node`                                                                      | T::Array<[::OpenApiSDK::Operations::Node](../../models/operations/node.md)> | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `hash`                                                                      | *T.nilable(::String)*                                                       | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `url`                                                                       | *::String*                                                                  | :heavy_check_mark:                                                          | N/A                                                                         |
+| `files`                                                                     | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `install_type`                                                              | *T.nilable(::Object)*                                                       | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `warning`                                                                   | *T.nilable(::String)*                                                       | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `pip`                                                                       | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | N/A                                                                         |
