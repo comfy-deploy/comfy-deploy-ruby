@@ -3,14 +3,14 @@ id: 78d0454e-9200-41d2-a226-c97b6eef2032
 management:
   docChecksum: 751bbee351db5354325a9ef968014e0d
   docVersion: 0.0.1
-  speakeasyVersion: 1.337.0
-  generationVersion: 2.373.0
-  releaseVersion: 0.0.6
-  configChecksum: f52a4e41ccf034d7f20fce5a56113208
+  speakeasyVersion: 1.337.1
+  generationVersion: 2.373.2
+  releaseVersion: 0.0.7
+  configChecksum: 4ab3e0e07eed99160325b7ff92aa2364
   published: true
 features:
   ruby:
-    core: 3.2.15
+    core: 3.2.16
     flattening: 2.81.1
     globalSecurity: 2.81.6
     globalServerURLs: 2.82.3
@@ -23,7 +23,6 @@ generatedFiles:
   - lib/open_api_sdk/comfyui.rb
   - lib/open_api_sdk/machines.rb
   - lib/open_api_sdk/comfydeploy.rb
-  - .rubocop.yml
   - Gemfile
   - Gemfile.lock
   - Rakefile
@@ -326,3 +325,4 @@ generatedFiles:
   - docs/sdks/machines/README.md
   - USAGE.md
   - .gitattributes
+  - CONTRIBUTING.md
