@@ -1,17 +1,17 @@
-speakeasyVersion: 1.335.2
+speakeasyVersion: 1.337.0
 sources:
     comfydeploy-api:
         sourceNamespace: comfydeploy-api
-        sourceRevisionDigest: sha256:afa07becbd1793f398b4b2dcc131ed36953f748d71d1e0ab059988bf9d0661fa
-        sourceBlobDigest: sha256:b3a77a8e72006a36c8114b1cc83abd4662b13148823630831509880fc5d42953
+        sourceRevisionDigest: sha256:e46baf997f5e5ce1cba50946ef5212885a48b594e111bd1419d98a842dba00e1
+        sourceBlobDigest: sha256:37c4714e1f5dad59d38fd223d5b595e7426fb9586226a176dbcdf37525e5e7a3
         tags:
             - latest
 targets:
     comfy-deploy:
         source: comfydeploy-api
         sourceNamespace: comfydeploy-api
-        sourceRevisionDigest: sha256:afa07becbd1793f398b4b2dcc131ed36953f748d71d1e0ab059988bf9d0661fa
-        sourceBlobDigest: sha256:b3a77a8e72006a36c8114b1cc83abd4662b13148823630831509880fc5d42953
+        sourceRevisionDigest: sha256:e46baf997f5e5ce1cba50946ef5212885a48b594e111bd1419d98a842dba00e1
+        sourceBlobDigest: sha256:37c4714e1f5dad59d38fd223d5b595e7426fb9586226a176dbcdf37525e5e7a3
         outLocation: /Users/bennykok/Documents/GitHub/comfy-deploy-ruby
 workflow:
     workflowVersion: 1.0.0
