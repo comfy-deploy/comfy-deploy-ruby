@@ -19,6 +19,8 @@ module OpenApiSDK
       field :gpu, T.nilable(::OpenApiSDK::Operations::Gpu), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('gpu'), 'decoder': Utils.enum_from_string(::OpenApiSDK::Operations::Gpu, true) } }
       # External inputs to the workflow
       field :inputs, T.nilable(T::Hash[Symbol, ::Object]), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('inputs') } }
+      # External inputs to the workflow in JSON format
+      field :inputs_json, T.nilable(::String), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('inputs_json') } }
 
       field :machine_id, T.nilable(::String), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('machine_id') } }
 
@@ -33,16 +35,19 @@ module OpenApiSDK
       field :webhook, T.nilable(::String), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('webhook') } }
       # Workflow API JSON to run
       field :workflow_api, T.nilable(::Object), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('workflow_api') } }
+      # Workflow API JSON to run
+      field :workflow_api_json, T.nilable(::String), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('workflow_api_json') } }
       # Workflow ID to run
       field :workflow_id, T.nilable(::String), { 'format_json': { 'letter_case': ::OpenApiSDK::Utils.field_name('workflow_id') } }
 
 
-      sig { params(concurrency_limit: T.nilable(::Float), deployment_id: T.nilable(::String), gpu: T.nilable(::OpenApiSDK::Operations::Gpu), inputs: T.nilable(T::Hash[Symbol, ::Object]), machine_id: T.nilable(::String), private_volume_name: T.nilable(::String), run_origin: T.nilable(::OpenApiSDK::Operations::RunOrigin), stream: T.nilable(T::Boolean), timeout: T.nilable(::Float), webhook: T.nilable(::String), workflow_api: T.nilable(::Object), workflow_id: T.nilable(::String)).void }
-      def initialize(concurrency_limit: nil, deployment_id: nil, gpu: nil, inputs: nil, machine_id: nil, private_volume_name: nil, run_origin: nil, stream: nil, timeout: nil, webhook: nil, workflow_api: nil, workflow_id: nil)
+      sig { params(concurrency_limit: T.nilable(::Float), deployment_id: T.nilable(::String), gpu: T.nilable(::OpenApiSDK::Operations::Gpu), inputs: T.nilable(T::Hash[Symbol, ::Object]), inputs_json: T.nilable(::String), machine_id: T.nilable(::String), private_volume_name: T.nilable(::String), run_origin: T.nilable(::OpenApiSDK::Operations::RunOrigin), stream: T.nilable(T::Boolean), timeout: T.nilable(::Float), webhook: T.nilable(::String), workflow_api: T.nilable(::Object), workflow_api_json: T.nilable(::String), workflow_id: T.nilable(::String)).void }
+      def initialize(concurrency_limit: nil, deployment_id: nil, gpu: nil, inputs: nil, inputs_json: nil, machine_id: nil, private_volume_name: nil, run_origin: nil, stream: nil, timeout: nil, webhook: nil, workflow_api: nil, workflow_api_json: nil, workflow_id: nil)
         @concurrency_limit = concurrency_limit
         @deployment_id = deployment_id
         @gpu = gpu
         @inputs = inputs
+        @inputs_json = inputs_json
         @machine_id = machine_id
         @private_volume_name = private_volume_name
         @run_origin = run_origin
@@ -50,6 +55,7 @@ module OpenApiSDK
         @timeout = timeout
         @webhook = webhook
         @workflow_api = workflow_api
+        @workflow_api_json = workflow_api_json
         @workflow_id = workflow_id
       end
     end

@@ -1,4 +1,6 @@
+# require 'comfydeploy'
 require 'comfydeploy'
+require 'json'
 
 # Initialize the client
 client = ::OpenApiSDK::ComfyDeploy.new
@@ -8,14 +10,18 @@ client.config_security(
   )
 )
 
-# Create the request
+# Createputs request.inspectputs request.inspect the request
 request = ::OpenApiSDK::Operations::PostRunRequestBody.new(
-  deployment_id: "e098c95b-9b15-440a-ab53-0438bf7338c8"
+  deployment_id: "e098c95b-9b15-440a-ab53-0438bf7338c8",
+  inputs_json: {
+    "positive_prompt": "beautiful scenery nature glass bottle landscape, , orange galaxy bottle,",
+    "negative_prompt": "text, watermark"
+  }.to_json
 )
 
 begin
   response = client.run.create(request)
-  
+
   if response.two_hundred_application_json_object
     puts "Run created successfully: #{response.two_hundred_application_json_object}"
     # Log the successful result

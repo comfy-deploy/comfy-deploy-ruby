@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 78d0454e-9200-41d2-a226-c97b6eef2032
 management:
-  docChecksum: 751bbee351db5354325a9ef968014e0d
+  docChecksum: 90a6df087c5f49f76c5f3281d1d2ec81
   docVersion: 0.0.1
-  speakeasyVersion: 1.337.1
-  generationVersion: 2.373.2
-  releaseVersion: 0.0.7
-  configChecksum: 4ab3e0e07eed99160325b7ff92aa2364
+  speakeasyVersion: 1.339.0
+  generationVersion: 2.375.5
+  releaseVersion: 0.0.10
+  configChecksum: 78f4b77ab5b4b1e79a32672d7ddedb93
   published: true
 features:
   ruby:

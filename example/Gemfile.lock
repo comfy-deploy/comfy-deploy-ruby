@@ -1,12 +1,16 @@
-GEM
-  remote: https://rubygems.org/
+PATH
+  remote: ..
   specs:
-    comfydeploy (0.0.1)
+    comfydeploy (0.0.10)
       faraday
       faraday-multipart
       rack
       rake
       sorbet
+
+GEM
+  remote: https://rubygems.org/
+  specs:
     diff-lcs (1.5.1)
     faraday (2.10.0)
       faraday-net_http (>= 2.0, < 3.2)
@@ -47,7 +51,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  comfydeploy
+  comfydeploy!
   rspec
 
 BUNDLED WITH

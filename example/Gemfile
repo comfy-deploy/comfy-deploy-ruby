@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'comfydeploy'
+gem 'comfydeploy', path: "../"
 # Add other gems as needed
 
 group :development, :test do

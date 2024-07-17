@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    comfydeploy (0.0.7)
+    comfydeploy (0.0.10)
       faraday
       faraday-multipart
       rack

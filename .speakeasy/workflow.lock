@@ -1,19 +1,19 @@
-speakeasyVersion: 1.337.1
+speakeasyVersion: 1.339.0
 sources:
     comfydeploy-api:
         sourceNamespace: comfydeploy-api
-        sourceRevisionDigest: sha256:ab93448b47dda348fc6c386e3ca48252e1f2e03e57a1d33903420ba629ba9356
-        sourceBlobDigest: sha256:7ce0a430e874c230007530629aabb3f9b17272ff7526db360b8a4d503cb7a1d7
+        sourceRevisionDigest: sha256:fbd030a102d62af079f05c4da0ff9b371db4f772f7480225e165301647e9cf5e
+        sourceBlobDigest: sha256:a5a9a2b61cc474dabeb3050ae2431aa914d6af7219d79ccd3828e369f8db1906
         tags:
             - latest
 targets:
     comfy-deploy:
         source: comfydeploy-api
         sourceNamespace: comfydeploy-api
-        sourceRevisionDigest: sha256:ab93448b47dda348fc6c386e3ca48252e1f2e03e57a1d33903420ba629ba9356
-        sourceBlobDigest: sha256:7ce0a430e874c230007530629aabb3f9b17272ff7526db360b8a4d503cb7a1d7
+        sourceRevisionDigest: sha256:fbd030a102d62af079f05c4da0ff9b371db4f772f7480225e165301647e9cf5e
+        sourceBlobDigest: sha256:a5a9a2b61cc474dabeb3050ae2431aa914d6af7219d79ccd3828e369f8db1906
         codeSamplesNamespace: code-samples-ruby-comfy-deploy
-        codeSamplesRevisionDigest: sha256:6b59a3c18ed178b19073ef0c3e36f4079bd6c9861c24d2438de3dbaac143dcee
+        codeSamplesRevisionDigest: sha256:09c7dfbbd460077c7f9d440234cf4a635c7c8a6024ddc97addaf037114fbfa62
         outLocation: /Users/bennykok/Documents/GitHub/comfy-deploy-ruby
 workflow:
     workflowVersion: 1.0.0
