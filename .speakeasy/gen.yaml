@@ -1,6 +1,5 @@
 configVersion: 2.0.0
 generation:
-  baseServerUrl: https://www.comfydeploy.com
   sdkClassName: ComfyDeploy
   maintainOpenAPIOrder: true
   usageSnippets:
