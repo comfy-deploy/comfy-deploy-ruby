@@ -1,10 +1,9 @@
-# GetWebsocketDeploymentIdWorkflowsResponseBody
-
-Error creating run
+# Gifs
 
 
 ## Fields
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `error`            | *::String*         | :heavy_check_mark: | N/A                |
+| `url`              | *::String*         | :heavy_check_mark: | N/A                |
+| `filename`         | *::String*         | :heavy_check_mark: | N/A                |

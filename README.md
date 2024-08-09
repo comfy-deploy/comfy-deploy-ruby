@@ -62,14 +62,9 @@ end
 
 * [get_upload_url](docs/sdks/files/README.md#get_upload_url) - Upload any files to the storage
 
-### [Workflows](docs/sdks/workflows/README.md)
+### [Websocket](docs/sdks/websocket/README.md)
 
-* [get_websocket_deployment_id_](docs/sdks/workflows/README.md#get_websocket_deployment_id_) - Get a websocket url for a specific deployment
-* [post_machine_endpoint](docs/sdks/workflows/README.md#post_machine_endpoint) - Create an endpoint for a machine
-* [get_v1_workflows](docs/sdks/workflows/README.md#get_v1_workflows) - Retrieve workflows
-* [post_v1_workflows](docs/sdks/workflows/README.md#post_v1_workflows) - Create a new workflow
-* [get_v1_workflows_workflow_id_](docs/sdks/workflows/README.md#get_v1_workflows_workflow_id_) - Retrieve a specific workflow by ID
-* [get_v1_workflows_workflow_id_outputs](docs/sdks/workflows/README.md#get_v1_workflows_workflow_id_outputs) - Retrieve the most recent outputs for a workflow
+* [get](docs/sdks/websocket/README.md#get) - Get a websocket url for a specific deployment
 
 ### [Comfyui](docs/sdks/comfyui/README.md)
 
@@ -79,6 +74,14 @@ end
 * [get_workflow_id_](docs/sdks/comfyui/README.md#get_workflow_id_) - Get comfyui workflow
 * [get_deployment_id_inputs](docs/sdks/comfyui/README.md#get_deployment_id_inputs) - Get comfyui workflow inputs definition
 * [get_deployment](docs/sdks/comfyui/README.md#get_deployment) - Get all deployed workflows
+
+### [Workflows](docs/sdks/workflows/README.md)
+
+* [post_machine_endpoint](docs/sdks/workflows/README.md#post_machine_endpoint) - Create an endpoint for a machine
+* [get_all](docs/sdks/workflows/README.md#get_all) - Retrieve workflows
+* [create](docs/sdks/workflows/README.md#create) - Create a new workflow
+* [get](docs/sdks/workflows/README.md#get) - Retrieve a specific workflow by ID
+* [get_outputs](docs/sdks/workflows/README.md#get_outputs) - Retrieve the most recent outputs for a workflow
 
 ### [Machines](docs/sdks/machines/README.md)
 
