@@ -3,10 +3,13 @@
 
 ## Fields
 
-| Field              | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `class_type`       | *::String*         | :heavy_check_mark: | N/A                |
-| `input_id`         | *::String*         | :heavy_check_mark: | N/A                |
-| `default_value`    | *::String*         | :heavy_check_mark: | N/A                |
-| `min_value`        | *::Float*          | :heavy_check_mark: | N/A                |
-| `max_value`        | *::Float*          | :heavy_check_mark: | N/A                |
+| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `class_type`                                                                | [::OpenApiSDK::Operations::ClassType](../../models/operations/classtype.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `input_id`                                                                  | *::String*                                                                  | :heavy_check_mark:                                                          | N/A                                                                         |
+| `default_value`                                                             | *::Object*                                                                  | :heavy_check_mark:                                                          | N/A                                                                         |
+| `min_value`                                                                 | *T.nilable(::Float)*                                                        | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `max_value`                                                                 | *T.nilable(::Float)*                                                        | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `display_name`                                                              | *T.nilable(::String)*                                                       | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `description`                                                               | *T.nilable(::String)*                                                       | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `enum_values`                                                               | T::Array<*::String*>                                                        | :heavy_minus_sign:                                                          | N/A                                                                         |
