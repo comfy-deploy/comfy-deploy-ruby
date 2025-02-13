@@ -1,5 +1,7 @@
 # Files
+(*files*)
 
+## Overview
 
 ### Available Operations
 
@@ -23,7 +25,7 @@ s.config_security(
 )
 
     
-res = s.files.get_upload_url(type=::OpenApiSDK::Operations::Type::APPLICATION_OCTET_STREAM, file_size="<value>")
+res = s.files.get_upload_url(type=::OpenApiSDK::Operations::Type::APPLICATION_ZIP, file_size="<value>", file_extension="<value>")
 
 if ! res.two_hundred_application_json_object.nil?
   # handle response
@@ -37,7 +39,7 @@ end
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
 | `type`                                                            | [::OpenApiSDK::Operations::Type](../../models/operations/type.md) | :heavy_check_mark:                                                | N/A                                                               |
 | `file_size`                                                       | *::String*                                                        | :heavy_check_mark:                                                | N/A                                                               |
-
+| `file_extension`                                                  | *T.nilable(::String)*                                             | :heavy_minus_sign:                                                | N/A                                                               |
 
 ### Response
 

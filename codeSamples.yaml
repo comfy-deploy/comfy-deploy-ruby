@@ -3,117 +3,135 @@ info:
   title: CodeSamples overlay for ruby target
   version: 0.0.0
 actions:
-  - target: $["paths"]["/workflow"]["post"]
+  - target: $["paths"]["/api/status-update"]["post"]
     update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "post_/workflow"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostWorkflowRequestBody.new(\n  workflow_api: {\n    \"fugiat\": ::OpenApiSDK::Operations::WorkflowApi.new(\n      inputs: {\n        \"User\": \"<value>\",\n      },\n    ),\n  },\n  snapshot: ::OpenApiSDK::Operations::Snapshot.new(\n    comfyui: \"<value>\",\n    git_custom_nodes: {\n      \"foreshorten\": ::OpenApiSDK::Operations::GitCustomNodes.new(\n        hash: \"<value>\",\n        disabled: false,\n      ),\n    },\n    file_custom_nodes: [\n      \"<value>\",\n    ],\n  ),\n)\n    \nres = s.comfyui.post_workflow(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/workflow/{id}"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/workflow/{id}"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.comfyui.get_workflow_id_(id=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/v1/machines"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/v1/machines"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.machines.get_v1_machines(page=\"<value>\", page_size=\"<value>\", fields_=::OpenApiSDK::Operations::Fields::MINIMAL)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/v1/machines"]["post"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "post_/v1/machines"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostV1MachinesRequestBody.new()\n    \nres = s.machines.post_v1_machines(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/run"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/run"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.run.get(run_id=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/machine-endpoint"]["post"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "endpoint"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostMachineEndpointRequestBody.new(\n  machine_id: \"<value>\",\n  type: \"<value>\",\n)\n    \nres = s.workflows.post_machine_endpoint(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/v1/workflows"]["post"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "post_/v1/workflows"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostV1WorkflowsRequestBody.new()\n    \nres = s.workflows.post_v1_workflows(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/v1/workflows/{workflow_id}/outputs"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/v1/workflows/{workflow_id}/outputs"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::GetV1WorkflowsWorkflowIdOutputsRequest.new(\n  workflow_id: \"<value>\",\n)\n    \nres = s.workflows.get_v1_workflows_workflow_id_outputs(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/upload-url"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "url"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.files.get_upload_url(type=::OpenApiSDK::Operations::Type::APPLICATION_OCTET_STREAM, file_size=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/v1/workflows/{workflow_id}"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/v1/workflows/{workflow_id}"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.workflows.get_v1_workflows_workflow_id_(workflow_id=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/run"]["post"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "post_/run"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostRunRequestBody.new(\n  deployment_id: \"d290f1ee-6c54-4b01-90e6-d701748f0851\",\n  workflow_id: \"f47ac10b-58cc-4372-a567-0e02b2c3d479\",\n  inputs: {\n    \"online\": \"<value>\",\n  },\n  webhook: \"https://example.com/webhook\",\n)\n    \nres = s.run.create(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/v1/workflows"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/v1/workflows"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.workflows.get_v1_workflows(page=\"<value>\", page_size=\"<value>\", search=\"<value>\")\n\nif ! res.response_bodies.nil?\n  # handle response\nend"
-  - target: $["paths"]["/deployment/{id}/inputs"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/deployment/{id}/inputs"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.comfyui.get_deployment_id_inputs(id=\"<value>\")\n\nif ! res.response_bodies.nil?\n  # handle response\nend"
-  - target: $["paths"]["/deployment"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/deployment"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.comfyui.get_deployment(environment=::OpenApiSDK::Operations::Environment::STAGING)\n\nif ! res.response_bodies.nil?\n  # handle response\nend"
-  - target: $["paths"]["/v1/machines/{machine_id}"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/v1/machines/{machine_id}"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.machines.get_v1_machines_machine_id_(machine_id=\"<value>\", ext_urls=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/websocket/{deployment_id}"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "get_/websocket/{deployment_id}"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.workflows.get_websocket_deployment_id_(deployment_id=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+      x-codeSamples:
+        - lang: ruby
+          label: runUpdates
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\n\n\nreq = ::OpenApiSDK::Webhooks::RunUpdatesRequestBody.new(\n  status: ::OpenApiSDK::Webhooks::Status::TIMEOUT,\n  live_status: \"<value>\",\n  progress: 9170.53,\n  run_id: \"<id>\",\n  outputs: [\n    ::OpenApiSDK::Webhooks::Outputs.new(\n      data: ::OpenApiSDK::Webhooks::Data.new(),\n    ),\n  ],\n)\n    \nres = s.run_updates(req)\n\nif res.status_code == 200\n  # handle response\nend"
   - target: $["paths"]["/auth-response/{request_id}"]["get"]
     update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "response/{request_id}"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.comfyui.get_auth_response_request_id_(request_id=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
-  - target: $["paths"]["/workflow-version/{version_id}"]["get"]
+      x-codeSamples:
+        - lang: ruby
+          label: response/{request_id}
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.comfyui.get_auth_response_request_id_(request_id=\"<id>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/deployment"]["get"]
     update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "version/{version_id}"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.comfyui.get_workflow_version_version_id_(version_id=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+      x-codeSamples:
+        - lang: ruby
+          label: get_/deployment
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.deployment.get(environment=::OpenApiSDK::Operations::Environment::STAGING)\n\nif ! res.response_bodies.nil?\n  # handle response\nend"
+  - target: $["paths"]["/deployment/{id}/inputs"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/deployment/{id}/inputs
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.deployment.get_input_definition(id=\"<id>\")\n\nif ! res.response_bodies.nil?\n  # handle response\nend"
+  - target: $["paths"]["/end_gpu_event"]["post"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: post_/end_gpu_event
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostEndGpuEventRequestBody.new(\n  event_type: ::OpenApiSDK::Operations::PostEndGpuEventEventType::GPU_END,\n)\n    \nres = s.machine.post_end_gpu_event(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
   - target: $["paths"]["/gpu_event"]["post"]
     update:
-      "x-codeSamples":
-        - "lang": "ruby"
-          "label": "post_/gpu_event"
-          "source": "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostGpuEventRequestBody.new(\n  machine_id: \"<value>\",\n  timestamp: \"<value>\",\n  event_type: ::OpenApiSDK::Operations::EventType::GPU_END,\n  gpu_provider: ::OpenApiSDK::Operations::GpuProvider::MODAL,\n)\n    \nres = s.machines.post_gpu_event(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+      x-codeSamples:
+        - lang: ruby
+          label: post_/gpu_event
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostGpuEventRequestBody.new(\n  machine_id: \"<id>\",\n  timestamp: \"<value>\",\n  event_type: ::OpenApiSDK::Operations::EventType::GPU_END,\n  gpu_provider: ::OpenApiSDK::Operations::GpuProvider::FAL,\n)\n    \nres = s.machine.post_gpu_event(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/machine-endpoint"]["post"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: endpoint
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostMachineEndpointRequestBody.new(\n  machine_id: \"<id>\",\n  type: \"<value>\",\n)\n    \nres = s.workflows.post_machine_endpoint(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/machine/{machine_id}/events"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/machine/{machine_id}/events
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.machine.list_events(machine_id=\"<id>\", status=::OpenApiSDK::Operations::Status::RUNNING, limit=7241.87)\n\nif ! res.response_bodies.nil?\n  # handle response\nend"
+  - target: $["paths"]["/run"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/run
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.run.get(run_id=\"<id>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/run"]["post"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: post_/run
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostRunRequestBody.new(\n  deployment_id: \"d290f1ee-6c54-4b01-90e6-d701748f0851\",\n  inputs: {\n    \"input_text\": \"value1\",\n    \"input_url\": \"https://example.png\",\n  },\n  webhook: \"https://example.com/webhook\",\n)\n    \nres = s.run.create(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/upload-url"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: url
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.files.get_upload_url(type=::OpenApiSDK::Operations::Type::APPLICATION_ZIP, file_size=\"<value>\", file_extension=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/v1/machines"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/v1/machines
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.machine.get_v1_machines(page=\"<value>\", page_size=\"<value>\", fields_=::OpenApiSDK::Operations::Fields::MINIMAL)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/v1/machines"]["post"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: post_/v1/machines
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostV1MachinesRequestBody.new()\n    \nres = s.machine.post_v1_machines(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/v1/machines/{machine_id}"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/v1/machines/{machine_id}
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.machine.get_v1_machines_machine_id_(machine_id=\"<id>\", ext_urls=\"<value>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/v1/workflows"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/v1/workflows
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.workflows.get_all(page=\"<value>\", page_size=\"<value>\", search=\"<value>\")\n\nif ! res.response_bodies.nil?\n  # handle response\nend"
+  - target: $["paths"]["/v1/workflows"]["post"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: post_/v1/workflows
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostV1WorkflowsRequestBody.new()\n    \nres = s.workflows.create(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/v1/workflows/{workflow_id}"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/v1/workflows/{workflow_id}
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.workflows.get(workflow_id=\"<id>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/v1/workflows/{workflow_id}/outputs"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/v1/workflows/{workflow_id}/outputs
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::GetV1WorkflowsWorkflowIdOutputsRequest.new(\n  workflow_id: \"<id>\",\n)\n    \nres = s.workflows.get_outputs(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/websocket/{deployment_id}"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/websocket/{deployment_id}
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.websocket.get(deployment_id=\"<id>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/workflow"]["post"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: post_/workflow
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n\nreq = ::OpenApiSDK::Operations::PostWorkflowRequestBody.new(\n  workflow_api: {\n    \"key\": ::OpenApiSDK::Operations::WorkflowApi.new(\n      inputs: {\n        \"key\": \"<value>\",\n      },\n    ),\n  },\n  snapshot: ::OpenApiSDK::Operations::Snapshot.new(\n    comfyui: \"<value>\",\n    git_custom_nodes: {\n      \"key\": ::OpenApiSDK::Operations::GitCustomNodes.new(\n        hash: \"<value>\",\n        disabled: false,\n      ),\n    },\n    file_custom_nodes: [\n      \"<value>\",\n    ],\n  ),\n)\n    \nres = s.comfyui.post_workflow(req)\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/workflow-version/{version_id}"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: version/{version_id}
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.comfyui.get_workflow_version_version_id_(version_id=\"<id>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"
+  - target: $["paths"]["/workflow/{id}"]["get"]
+    update:
+      x-codeSamples:
+        - lang: ruby
+          label: get_/workflow/{id}
+          source: "require 'comfydeploy'\n\n\ns = ::OpenApiSDK::ComfyDeploy.new\ns.config_security(\n  ::OpenApiSDK::Shared::Security.new(\n    bearer_auth: \"<YOUR_BEARER_TOKEN_HERE>\",\n  )\n)\n\n    \nres = s.comfyui.get_workflow_id_(id=\"<id>\")\n\nif ! res.two_hundred_application_json_object.nil?\n  # handle response\nend"

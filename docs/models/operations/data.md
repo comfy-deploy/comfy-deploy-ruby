@@ -1,0 +1,11 @@
+# Data
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `images`                                                                                  | T::Array<[::OpenApiSDK::Operations::Images](../../models/operations/images.md)>           | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `files`                                                                                   | T::Array<[::OpenApiSDK::Operations::GetRunFiles](../../models/operations/getrunfiles.md)> | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `gifs`                                                                                    | T::Array<[::OpenApiSDK::Operations::Gifs](../../models/operations/gifs.md)>               | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `text`                                                                                    | T::Array<*::String*>                                                                      | :heavy_minus_sign:                                                                        | N/A                                                                                       |

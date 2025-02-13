@@ -1,34 +1,341 @@
 lockVersion: 2.0.0
 id: 78d0454e-9200-41d2-a226-c97b6eef2032
 management:
-  docChecksum: 90a6df087c5f49f76c5f3281d1d2ec81
+  docChecksum: 43a345c33feda24d7712a2beeb7073cf
   docVersion: 0.0.1
-  speakeasyVersion: 1.339.0
-  generationVersion: 2.375.5
-  releaseVersion: 0.0.10
-  configChecksum: 78f4b77ab5b4b1e79a32672d7ddedb93
+  speakeasyVersion: 1.490.0
+  generationVersion: 2.512.0
+  releaseVersion: 0.1.0
+  configChecksum: 30bd44edbd62180dec369b8deb714fef
+  repoURL: https://github.com/comfy-deploy/comfy-deploy-ruby.git
+  installationURL: https://github.com/comfy-deploy/comfy-deploy-ruby
   published: true
 features:
   ruby:
-    core: 3.2.16
+    core: 3.5.3
     flattening: 2.81.1
-    globalSecurity: 2.81.6
+    globalSecurity: 2.81.8
     globalServerURLs: 2.82.3
     nameOverrides: 2.81.2
+    webhooks: 1.0.0
 generatedFiles:
-  - lib/open_api_sdk/sdkconfiguration.rb
-  - lib/open_api_sdk/run.rb
-  - lib/open_api_sdk/files.rb
-  - lib/open_api_sdk/workflows.rb
-  - lib/open_api_sdk/comfyui.rb
-  - lib/open_api_sdk/machines.rb
-  - lib/open_api_sdk/comfydeploy.rb
+  - .gitattributes
   - Gemfile
   - Gemfile.lock
   - Rakefile
+  - USAGE.md
+  - comfydeploy.gemspec
+  - docs/models/operations/classtype.md
+  - docs/models/operations/customnodes.md
+  - docs/models/operations/data.md
+  - docs/models/operations/dependencies.md
+  - docs/models/operations/environment.md
+  - docs/models/operations/eventtype.md
+  - docs/models/operations/fields_.md
+  - docs/models/operations/files.md
+  - docs/models/operations/getauthresponserequestidcomfyuiresponsebody.md
+  - docs/models/operations/getauthresponserequestidcomfyuiresponseresponsebody.md
+  - docs/models/operations/getauthresponserequestidrequest.md
+  - docs/models/operations/getauthresponserequestidresponse.md
+  - docs/models/operations/getauthresponserequestidresponsebody.md
+  - docs/models/operations/getdeploymentclasstype.md
+  - docs/models/operations/getdeploymentdeploymentresponsebody.md
+  - docs/models/operations/getdeploymentidinputsrequest.md
+  - docs/models/operations/getdeploymentidinputsresponse.md
+  - docs/models/operations/getdeploymentidinputsresponsebody.md
+  - docs/models/operations/getdeploymentrequest.md
+  - docs/models/operations/getdeploymentresponse.md
+  - docs/models/operations/getdeploymentresponsebody.md
+  - docs/models/operations/getmachinemachineideventsenvironment.md
+  - docs/models/operations/getmachinemachineideventsgpu.md
+  - docs/models/operations/getmachinemachineideventsmachineresponsebody.md
+  - docs/models/operations/getmachinemachineideventsrequest.md
+  - docs/models/operations/getmachinemachineideventsresponse.md
+  - docs/models/operations/getmachinemachineideventsresponsebody.md
+  - docs/models/operations/getrunfiles.md
+  - docs/models/operations/getrungpu.md
+  - docs/models/operations/getrunrequest.md
+  - docs/models/operations/getrunresponse.md
+  - docs/models/operations/getrunresponsebody.md
+  - docs/models/operations/getrunrunresponsebody.md
+  - docs/models/operations/getrunrunresponseresponsebody.md
+  - docs/models/operations/getrunstatus.md
+  - docs/models/operations/getrunworkflowapi.md
+  - docs/models/operations/getuploadurlfilesresponsebody.md
+  - docs/models/operations/getuploadurlrequest.md
+  - docs/models/operations/getuploadurlresponse.md
+  - docs/models/operations/getuploadurlresponsebody.md
+  - docs/models/operations/getv1machinesmachineidmachineresponsebody.md
+  - docs/models/operations/getv1machinesmachineidrequest.md
+  - docs/models/operations/getv1machinesmachineidresponse.md
+  - docs/models/operations/getv1machinesmachineidresponsebody.md
+  - docs/models/operations/getv1machinesmachineresponsebody.md
+  - docs/models/operations/getv1machinesrequest.md
+  - docs/models/operations/getv1machinesresponse.md
+  - docs/models/operations/getv1machinesresponsebody.md
+  - docs/models/operations/getv1workflowsrequest.md
+  - docs/models/operations/getv1workflowsresponse.md
+  - docs/models/operations/getv1workflowsresponsebody.md
+  - docs/models/operations/getv1workflowsworkflowidoutputsoutputs.md
+  - docs/models/operations/getv1workflowsworkflowidoutputsrequest.md
+  - docs/models/operations/getv1workflowsworkflowidoutputsresponse.md
+  - docs/models/operations/getv1workflowsworkflowidoutputsresponsebody.md
+  - docs/models/operations/getv1workflowsworkflowidoutputsworkflowsresponsebody.md
+  - docs/models/operations/getv1workflowsworkflowidrequest.md
+  - docs/models/operations/getv1workflowsworkflowidresponse.md
+  - docs/models/operations/getv1workflowsworkflowidresponsebody.md
+  - docs/models/operations/getv1workflowsworkflowidversions.md
+  - docs/models/operations/getv1workflowsworkflowidworkflowsresponsebody.md
+  - docs/models/operations/getv1workflowsworkflowsresponsebody.md
+  - docs/models/operations/getwebsocketdeploymentidrequest.md
+  - docs/models/operations/getwebsocketdeploymentidresponse.md
+  - docs/models/operations/getwebsocketdeploymentidresponsebody.md
+  - docs/models/operations/getwebsocketdeploymentidwebsocketresponsebody.md
+  - docs/models/operations/getworkflowidcomfyuiresponsebody.md
+  - docs/models/operations/getworkflowidrequest.md
+  - docs/models/operations/getworkflowidresponse.md
+  - docs/models/operations/getworkflowidresponsebody.md
+  - docs/models/operations/getworkflowversionversionidcomfyuiresponsebody.md
+  - docs/models/operations/getworkflowversionversionidrequest.md
+  - docs/models/operations/getworkflowversionversionidresponse.md
+  - docs/models/operations/getworkflowversionversionidresponsebody.md
+  - docs/models/operations/gifs.md
+  - docs/models/operations/gitcustomnodes.md
+  - docs/models/operations/gpu.md
+  - docs/models/operations/gpuprovider.md
+  - docs/models/operations/gputype.md
+  - docs/models/operations/images.md
+  - docs/models/operations/inputsdefinition.md
+  - docs/models/operations/machines.md
+  - docs/models/operations/machinetype.md
+  - docs/models/operations/models.md
+  - docs/models/operations/node.md
+  - docs/models/operations/origin.md
+  - docs/models/operations/outputs.md
+  - docs/models/operations/postendgpueventeventtype.md
+  - docs/models/operations/postendgpueventmachineresponsebody.md
+  - docs/models/operations/postendgpueventrequestbody.md
+  - docs/models/operations/postendgpueventresponse.md
+  - docs/models/operations/postendgpueventresponsebody.md
+  - docs/models/operations/postgpueventmachineresponsebody.md
+  - docs/models/operations/postgpueventrequestbody.md
+  - docs/models/operations/postgpueventresponse.md
+  - docs/models/operations/postgpueventresponsebody.md
+  - docs/models/operations/postmachineendpointrequestbody.md
+  - docs/models/operations/postmachineendpointresponse.md
+  - docs/models/operations/postmachineendpointresponsebody.md
+  - docs/models/operations/postmachineendpointworkflowsresponsebody.md
+  - docs/models/operations/postrunrequestbody.md
+  - docs/models/operations/postrunresponse.md
+  - docs/models/operations/postrunresponsebody.md
+  - docs/models/operations/postrunrunresponsebody.md
+  - docs/models/operations/postv1machinesgpu.md
+  - docs/models/operations/postv1machinesmachineresponsebody.md
+  - docs/models/operations/postv1machinesrequestbody.md
+  - docs/models/operations/postv1machinesresponse.md
+  - docs/models/operations/postv1machinesresponsebody.md
+  - docs/models/operations/postv1machinesstatus.md
+  - docs/models/operations/postv1machinestype.md
+  - docs/models/operations/postv1workflowsrequestbody.md
+  - docs/models/operations/postv1workflowsresponse.md
+  - docs/models/operations/postv1workflowsresponsebody.md
+  - docs/models/operations/postv1workflowsworkflowsresponsebody.md
+  - docs/models/operations/postworkflowcomfyuiresponsebody.md
+  - docs/models/operations/postworkflowrequestbody.md
+  - docs/models/operations/postworkflowresponse.md
+  - docs/models/operations/postworkflowresponsebody.md
+  - docs/models/operations/providertype.md
+  - docs/models/operations/queryparamrunorigin.md
+  - docs/models/operations/responsebody.md
+  - docs/models/operations/runlog.md
+  - docs/models/operations/runorigin.md
+  - docs/models/operations/snapshot.md
+  - docs/models/operations/status.md
+  - docs/models/operations/type.md
+  - docs/models/operations/user.md
+  - docs/models/operations/versions.md
+  - docs/models/operations/webhookstatus.md
+  - docs/models/operations/workflowapi.md
+  - docs/models/operations/workflowinputs.md
+  - docs/models/operations/workflowjson.md
+  - docs/models/operations/wsgpu.md
+  - docs/models/operations/wsgputype.md
+  - docs/models/shared/security.md
+  - docs/models/webhooks/data.md
+  - docs/models/webhooks/files.md
+  - docs/models/webhooks/gifs.md
+  - docs/models/webhooks/images.md
+  - docs/models/webhooks/outputs.md
+  - docs/models/webhooks/runupdatesrequestbody.md
+  - docs/models/webhooks/runupdatesresponse.md
+  - docs/models/webhooks/status.md
+  - docs/sdks/comfydeploy/README.md
+  - docs/sdks/comfyui/README.md
+  - docs/sdks/deployment/README.md
+  - docs/sdks/files/README.md
+  - docs/sdks/machine/README.md
+  - docs/sdks/run/README.md
+  - docs/sdks/websocket/README.md
+  - docs/sdks/workflows/README.md
+  - lib/comfydeploy.rb
+  - lib/open_api_sdk/comfydeploy.rb
+  - lib/open_api_sdk/comfyui.rb
+  - lib/open_api_sdk/deployment.rb
+  - lib/open_api_sdk/files.rb
+  - lib/open_api_sdk/machine.rb
+  - lib/open_api_sdk/models/operations.rb
+  - lib/open_api_sdk/models/operations/class_type.rb
+  - lib/open_api_sdk/models/operations/custom_nodes.rb
+  - lib/open_api_sdk/models/operations/data.rb
+  - lib/open_api_sdk/models/operations/dependencies.rb
+  - lib/open_api_sdk/models/operations/environment.rb
+  - lib/open_api_sdk/models/operations/eventtype.rb
+  - lib/open_api_sdk/models/operations/fields_.rb
+  - lib/open_api_sdk/models/operations/files.rb
+  - lib/open_api_sdk/models/operations/get_auth_response_request_id_comfyui_response_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_auth_response_request_id_comfyui_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_auth_response_request_id_request.rb
+  - lib/open_api_sdk/models/operations/get_auth_response_request_id_response.rb
+  - lib/open_api_sdk/models/operations/get_auth_response_request_id_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_deployment_class_type.rb
+  - lib/open_api_sdk/models/operations/get_deployment_deployment_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_deployment_id_inputs_request.rb
+  - lib/open_api_sdk/models/operations/get_deployment_id_inputs_response.rb
+  - lib/open_api_sdk/models/operations/get_deployment_id_inputs_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_deployment_request.rb
+  - lib/open_api_sdk/models/operations/get_deployment_response.rb
+  - lib/open_api_sdk/models/operations/get_deployment_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_machine_machine_id_events_environment.rb
+  - lib/open_api_sdk/models/operations/get_machine_machine_id_events_gpu.rb
+  - lib/open_api_sdk/models/operations/get_machine_machine_id_events_machine_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_machine_machine_id_events_request.rb
+  - lib/open_api_sdk/models/operations/get_machine_machine_id_events_response.rb
+  - lib/open_api_sdk/models/operations/get_machine_machine_id_events_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_run_files.rb
+  - lib/open_api_sdk/models/operations/get_run_gpu.rb
+  - lib/open_api_sdk/models/operations/get_run_request.rb
+  - lib/open_api_sdk/models/operations/get_run_response.rb
+  - lib/open_api_sdk/models/operations/get_run_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_run_run_response_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_run_run_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_run_status.rb
+  - lib/open_api_sdk/models/operations/get_run_workflow_api.rb
+  - lib/open_api_sdk/models/operations/get_upload_url_files_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_upload_url_request.rb
+  - lib/open_api_sdk/models/operations/get_upload_url_response.rb
+  - lib/open_api_sdk/models/operations/get_upload_url_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_machines_machine_id_machine_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_machines_machine_id_request.rb
+  - lib/open_api_sdk/models/operations/get_v1_machines_machine_id_response.rb
+  - lib/open_api_sdk/models/operations/get_v1_machines_machine_id_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_machines_machine_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_machines_request.rb
+  - lib/open_api_sdk/models/operations/get_v1_machines_response.rb
+  - lib/open_api_sdk/models/operations/get_v1_machines_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_request.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_response.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_outputs_outputs.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_outputs_request.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_outputs_response.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_outputs_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_outputs_workflows_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_request.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_response.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_versions.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_workflows_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_v1_workflows_workflows_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_websocket_deployment_id_request.rb
+  - lib/open_api_sdk/models/operations/get_websocket_deployment_id_response.rb
+  - lib/open_api_sdk/models/operations/get_websocket_deployment_id_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_websocket_deployment_id_websocket_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_workflow_id_comfyui_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_workflow_id_request.rb
+  - lib/open_api_sdk/models/operations/get_workflow_id_response.rb
+  - lib/open_api_sdk/models/operations/get_workflow_id_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_comfyui_responsebody.rb
+  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_request.rb
+  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_response.rb
+  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_responsebody.rb
+  - lib/open_api_sdk/models/operations/gifs.rb
+  - lib/open_api_sdk/models/operations/git_custom_nodes.rb
+  - lib/open_api_sdk/models/operations/gpu.rb
+  - lib/open_api_sdk/models/operations/gpu_provider.rb
+  - lib/open_api_sdk/models/operations/gputype.rb
+  - lib/open_api_sdk/models/operations/images.rb
+  - lib/open_api_sdk/models/operations/inputs_definition.rb
+  - lib/open_api_sdk/models/operations/machine_type.rb
+  - lib/open_api_sdk/models/operations/machines.rb
+  - lib/open_api_sdk/models/operations/models.rb
+  - lib/open_api_sdk/models/operations/node.rb
+  - lib/open_api_sdk/models/operations/origin.rb
+  - lib/open_api_sdk/models/operations/outputs.rb
+  - lib/open_api_sdk/models/operations/post_end_gpu_event_eventtype.rb
+  - lib/open_api_sdk/models/operations/post_end_gpu_event_machine_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_end_gpu_event_requestbody.rb
+  - lib/open_api_sdk/models/operations/post_end_gpu_event_response.rb
+  - lib/open_api_sdk/models/operations/post_end_gpu_event_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_gpu_event_machine_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_gpu_event_requestbody.rb
+  - lib/open_api_sdk/models/operations/post_gpu_event_response.rb
+  - lib/open_api_sdk/models/operations/post_gpu_event_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_machine_endpoint_requestbody.rb
+  - lib/open_api_sdk/models/operations/post_machine_endpoint_response.rb
+  - lib/open_api_sdk/models/operations/post_machine_endpoint_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_machine_endpoint_workflows_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_run_requestbody.rb
+  - lib/open_api_sdk/models/operations/post_run_response.rb
+  - lib/open_api_sdk/models/operations/post_run_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_run_run_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_v1_machines_gpu.rb
+  - lib/open_api_sdk/models/operations/post_v1_machines_machine_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_v1_machines_requestbody.rb
+  - lib/open_api_sdk/models/operations/post_v1_machines_response.rb
+  - lib/open_api_sdk/models/operations/post_v1_machines_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_v1_machines_status.rb
+  - lib/open_api_sdk/models/operations/post_v1_machines_type.rb
+  - lib/open_api_sdk/models/operations/post_v1_workflows_requestbody.rb
+  - lib/open_api_sdk/models/operations/post_v1_workflows_response.rb
+  - lib/open_api_sdk/models/operations/post_v1_workflows_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_v1_workflows_workflows_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_workflow_comfyui_responsebody.rb
+  - lib/open_api_sdk/models/operations/post_workflow_requestbody.rb
+  - lib/open_api_sdk/models/operations/post_workflow_response.rb
+  - lib/open_api_sdk/models/operations/post_workflow_responsebody.rb
+  - lib/open_api_sdk/models/operations/providertype.rb
+  - lib/open_api_sdk/models/operations/queryparam_runorigin.rb
+  - lib/open_api_sdk/models/operations/responsebody.rb
+  - lib/open_api_sdk/models/operations/run_log.rb
+  - lib/open_api_sdk/models/operations/run_origin.rb
+  - lib/open_api_sdk/models/operations/snapshot.rb
+  - lib/open_api_sdk/models/operations/status.rb
+  - lib/open_api_sdk/models/operations/type.rb
+  - lib/open_api_sdk/models/operations/user.rb
+  - lib/open_api_sdk/models/operations/versions.rb
+  - lib/open_api_sdk/models/operations/webhook_status.rb
+  - lib/open_api_sdk/models/operations/workflow_api.rb
+  - lib/open_api_sdk/models/operations/workflow_inputs.rb
+  - lib/open_api_sdk/models/operations/workflow_json.rb
+  - lib/open_api_sdk/models/operations/ws_gpu.rb
+  - lib/open_api_sdk/models/operations/wsgputype.rb
+  - lib/open_api_sdk/models/shared.rb
+  - lib/open_api_sdk/models/shared/security.rb
+  - lib/open_api_sdk/models/webhooks/data.rb
+  - lib/open_api_sdk/models/webhooks/files.rb
+  - lib/open_api_sdk/models/webhooks/gifs.rb
+  - lib/open_api_sdk/models/webhooks/images.rb
+  - lib/open_api_sdk/models/webhooks/outputs.rb
+  - lib/open_api_sdk/models/webhooks/runupdates_requestbody.rb
+  - lib/open_api_sdk/models/webhooks/runupdates_response.rb
+  - lib/open_api_sdk/models/webhooks/status.rb
+  - lib/open_api_sdk/run.rb
+  - lib/open_api_sdk/sdkconfiguration.rb
   - lib/open_api_sdk/utils/metadata_fields.rb
   - lib/open_api_sdk/utils/t.rb
   - lib/open_api_sdk/utils/utils.rb
+  - lib/open_api_sdk/websocket.rb
+  - lib/open_api_sdk/workflows.rb
   - sorbet/config
   - sorbet/rbi/annotations/.gitattributes
   - sorbet/rbi/annotations/faraday.rbi
@@ -69,260 +376,87 @@ generatedFiles:
   - sorbet/rbi/gems/yarp@0.13.0.rbi
   - sorbet/tapioca/config.yml
   - sorbet/tapioca/require.rb
-  - comfydeploy.gemspec
-  - lib/open_api_sdk/models/operations/get_run_request.rb
-  - lib/open_api_sdk/models/operations/get_run_run_response_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_run_run_responsebody.rb
-  - lib/open_api_sdk/models/operations/workflow_inputs.rb
-  - lib/open_api_sdk/models/operations/get_run_workflow_api.rb
-  - lib/open_api_sdk/models/operations/origin.rb
-  - lib/open_api_sdk/models/operations/status.rb
-  - lib/open_api_sdk/models/operations/get_run_gpu.rb
-  - lib/open_api_sdk/models/operations/machine_type.rb
-  - lib/open_api_sdk/models/operations/run_log.rb
-  - lib/open_api_sdk/models/operations/webhook_status.rb
-  - lib/open_api_sdk/models/operations/get_run_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_run_response.rb
-  - lib/open_api_sdk/models/operations/gpu.rb
-  - lib/open_api_sdk/models/operations/run_origin.rb
-  - lib/open_api_sdk/models/operations/post_run_requestbody.rb
-  - lib/open_api_sdk/models/operations/post_run_run_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_run_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_run_response.rb
-  - lib/open_api_sdk/models/operations/type.rb
-  - lib/open_api_sdk/models/operations/get_upload_url_request.rb
-  - lib/open_api_sdk/models/operations/get_upload_url_files_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_upload_url_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_upload_url_response.rb
-  - lib/open_api_sdk/models/operations/get_websocket_deployment_id_request.rb
-  - lib/open_api_sdk/models/operations/get_websocket_deployment_id_workflows_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_websocket_deployment_id_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_websocket_deployment_id_response.rb
-  - lib/open_api_sdk/models/operations/post_machine_endpoint_requestbody.rb
-  - lib/open_api_sdk/models/operations/post_machine_endpoint_workflows_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_machine_endpoint_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_machine_endpoint_response.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_request.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_responsebody.rb
-  - lib/open_api_sdk/models/operations/user.rb
-  - lib/open_api_sdk/models/operations/versions.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflows_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_response.rb
-  - lib/open_api_sdk/models/operations/workflow_json.rb
-  - lib/open_api_sdk/models/operations/post_v1_workflows_requestbody.rb
-  - lib/open_api_sdk/models/operations/post_v1_workflows_workflows_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_v1_workflows_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_v1_workflows_response.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_request.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_workflows_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_versions.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_response.rb
-  - lib/open_api_sdk/models/operations/queryparam_runorigin.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_outputs_request.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_outputs_workflows_responsebody.rb
-  - lib/open_api_sdk/models/operations/outputs.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_outputs_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_v1_workflows_workflow_id_outputs_response.rb
-  - lib/open_api_sdk/models/operations/get_auth_response_request_id_request.rb
-  - lib/open_api_sdk/models/operations/get_auth_response_request_id_comfyui_response_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_auth_response_request_id_comfyui_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_auth_response_request_id_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_auth_response_request_id_response.rb
-  - lib/open_api_sdk/models/operations/workflow_api.rb
-  - lib/open_api_sdk/models/operations/git_custom_nodes.rb
-  - lib/open_api_sdk/models/operations/snapshot.rb
-  - lib/open_api_sdk/models/operations/node.rb
-  - lib/open_api_sdk/models/operations/custom_nodes.rb
-  - lib/open_api_sdk/models/operations/models.rb
-  - lib/open_api_sdk/models/operations/files.rb
-  - lib/open_api_sdk/models/operations/dependencies.rb
-  - lib/open_api_sdk/models/operations/post_workflow_requestbody.rb
-  - lib/open_api_sdk/models/operations/post_workflow_comfyui_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_workflow_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_workflow_response.rb
-  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_request.rb
-  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_comfyui_responsebody.rb
-  - lib/open_api_sdk/models/operations/workflow.rb
-  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_workflow_api.rb
-  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_snapshot.rb
-  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_dependencies.rb
-  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_workflow_version_version_id_response.rb
-  - lib/open_api_sdk/models/operations/get_workflow_id_request.rb
-  - lib/open_api_sdk/models/operations/get_workflow_id_comfyui_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_workflow_id_workflow.rb
-  - lib/open_api_sdk/models/operations/get_workflow_id_workflow_api.rb
-  - lib/open_api_sdk/models/operations/get_workflow_id_snapshot.rb
-  - lib/open_api_sdk/models/operations/get_workflow_id_dependencies.rb
-  - lib/open_api_sdk/models/operations/get_workflow_id_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_workflow_id_response.rb
-  - lib/open_api_sdk/models/operations/get_deployment_id_inputs_request.rb
-  - lib/open_api_sdk/models/operations/get_deployment_id_inputs_responsebody.rb
-  - lib/open_api_sdk/models/operations/responsebody.rb
-  - lib/open_api_sdk/models/operations/get_deployment_id_inputs_response.rb
-  - lib/open_api_sdk/models/operations/environment.rb
-  - lib/open_api_sdk/models/operations/get_deployment_request.rb
-  - lib/open_api_sdk/models/operations/get_deployment_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_deployment_comfyui_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_deployment_response.rb
-  - lib/open_api_sdk/models/operations/gputype.rb
-  - lib/open_api_sdk/models/operations/wsgputype.rb
-  - lib/open_api_sdk/models/operations/eventtype.rb
-  - lib/open_api_sdk/models/operations/gpu_provider.rb
-  - lib/open_api_sdk/models/operations/post_gpu_event_requestbody.rb
-  - lib/open_api_sdk/models/operations/post_gpu_event_machines_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_gpu_event_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_gpu_event_response.rb
-  - lib/open_api_sdk/models/operations/fields_.rb
-  - lib/open_api_sdk/models/operations/get_v1_machines_request.rb
-  - lib/open_api_sdk/models/operations/get_v1_machines_machines_responsebody.rb
-  - lib/open_api_sdk/models/operations/machines.rb
-  - lib/open_api_sdk/models/operations/get_v1_machines_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_v1_machines_response.rb
-  - lib/open_api_sdk/models/operations/post_v1_machines_requestbody.rb
-  - lib/open_api_sdk/models/operations/post_v1_machines_machines_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_v1_machines_type.rb
-  - lib/open_api_sdk/models/operations/post_v1_machines_status.rb
-  - lib/open_api_sdk/models/operations/post_v1_machines_gpu.rb
-  - lib/open_api_sdk/models/operations/post_v1_machines_responsebody.rb
-  - lib/open_api_sdk/models/operations/post_v1_machines_response.rb
-  - lib/open_api_sdk/models/operations/get_v1_machines_machine_id_request.rb
-  - lib/open_api_sdk/models/operations/get_v1_machines_machine_id_machines_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_v1_machines_machine_id_responsebody.rb
-  - lib/open_api_sdk/models/operations/get_v1_machines_machine_id_response.rb
-  - lib/open_api_sdk/models/shared/security.rb
-  - lib/comfydeploy.rb
-  - lib/open_api_sdk/models/operations.rb
-  - lib/open_api_sdk/models/shared.rb
-  - docs/models/operations/getrunrequest.md
-  - docs/models/operations/getrunrunresponseresponsebody.md
-  - docs/models/operations/getrunrunresponsebody.md
-  - docs/models/operations/workflowinputs.md
-  - docs/models/operations/getrunworkflowapi.md
-  - docs/models/operations/origin.md
-  - docs/models/operations/status.md
-  - docs/models/operations/getrungpu.md
-  - docs/models/operations/machinetype.md
-  - docs/models/operations/runlog.md
-  - docs/models/operations/webhookstatus.md
-  - docs/models/operations/getrunresponsebody.md
-  - docs/models/operations/getrunresponse.md
-  - docs/models/operations/gpu.md
-  - docs/models/operations/runorigin.md
-  - docs/models/operations/postrunrequestbody.md
-  - docs/models/operations/postrunrunresponsebody.md
-  - docs/models/operations/postrunresponsebody.md
-  - docs/models/operations/postrunresponse.md
-  - docs/models/operations/type.md
-  - docs/models/operations/getuploadurlrequest.md
-  - docs/models/operations/getuploadurlfilesresponsebody.md
-  - docs/models/operations/getuploadurlresponsebody.md
-  - docs/models/operations/getuploadurlresponse.md
-  - docs/models/operations/getwebsocketdeploymentidrequest.md
-  - docs/models/operations/getwebsocketdeploymentidworkflowsresponsebody.md
-  - docs/models/operations/getwebsocketdeploymentidresponsebody.md
-  - docs/models/operations/getwebsocketdeploymentidresponse.md
-  - docs/models/operations/postmachineendpointrequestbody.md
-  - docs/models/operations/postmachineendpointworkflowsresponsebody.md
-  - docs/models/operations/postmachineendpointresponsebody.md
-  - docs/models/operations/postmachineendpointresponse.md
-  - docs/models/operations/getv1workflowsrequest.md
-  - docs/models/operations/getv1workflowsresponsebody.md
-  - docs/models/operations/user.md
-  - docs/models/operations/versions.md
-  - docs/models/operations/getv1workflowsworkflowsresponsebody.md
-  - docs/models/operations/getv1workflowsresponse.md
-  - docs/models/operations/workflowjson.md
-  - docs/models/operations/postv1workflowsrequestbody.md
-  - docs/models/operations/postv1workflowsworkflowsresponsebody.md
-  - docs/models/operations/postv1workflowsresponsebody.md
-  - docs/models/operations/postv1workflowsresponse.md
-  - docs/models/operations/getv1workflowsworkflowidrequest.md
-  - docs/models/operations/getv1workflowsworkflowidworkflowsresponsebody.md
-  - docs/models/operations/getv1workflowsworkflowidversions.md
-  - docs/models/operations/getv1workflowsworkflowidresponsebody.md
-  - docs/models/operations/getv1workflowsworkflowidresponse.md
-  - docs/models/operations/queryparamrunorigin.md
-  - docs/models/operations/getv1workflowsworkflowidoutputsrequest.md
-  - docs/models/operations/getv1workflowsworkflowidoutputsworkflowsresponsebody.md
-  - docs/models/operations/outputs.md
-  - docs/models/operations/getv1workflowsworkflowidoutputsresponsebody.md
-  - docs/models/operations/getv1workflowsworkflowidoutputsresponse.md
-  - docs/models/operations/getauthresponserequestidrequest.md
-  - docs/models/operations/getauthresponserequestidcomfyuiresponseresponsebody.md
-  - docs/models/operations/getauthresponserequestidcomfyuiresponsebody.md
-  - docs/models/operations/getauthresponserequestidresponsebody.md
-  - docs/models/operations/getauthresponserequestidresponse.md
-  - docs/models/operations/workflowapi.md
-  - docs/models/operations/gitcustomnodes.md
-  - docs/models/operations/snapshot.md
-  - docs/models/operations/node.md
-  - docs/models/operations/customnodes.md
-  - docs/models/operations/models.md
-  - docs/models/operations/files.md
-  - docs/models/operations/dependencies.md
-  - docs/models/operations/postworkflowrequestbody.md
-  - docs/models/operations/postworkflowcomfyuiresponsebody.md
-  - docs/models/operations/postworkflowresponsebody.md
-  - docs/models/operations/postworkflowresponse.md
-  - docs/models/operations/getworkflowversionversionidrequest.md
-  - docs/models/operations/getworkflowversionversionidcomfyuiresponsebody.md
-  - docs/models/operations/workflow.md
-  - docs/models/operations/getworkflowversionversionidworkflowapi.md
-  - docs/models/operations/getworkflowversionversionidsnapshot.md
-  - docs/models/operations/getworkflowversionversioniddependencies.md
-  - docs/models/operations/getworkflowversionversionidresponsebody.md
-  - docs/models/operations/getworkflowversionversionidresponse.md
-  - docs/models/operations/getworkflowidrequest.md
-  - docs/models/operations/getworkflowidcomfyuiresponsebody.md
-  - docs/models/operations/getworkflowidworkflow.md
-  - docs/models/operations/getworkflowidworkflowapi.md
-  - docs/models/operations/getworkflowidsnapshot.md
-  - docs/models/operations/getworkflowiddependencies.md
-  - docs/models/operations/getworkflowidresponsebody.md
-  - docs/models/operations/getworkflowidresponse.md
-  - docs/models/operations/getdeploymentidinputsrequest.md
-  - docs/models/operations/getdeploymentidinputsresponsebody.md
-  - docs/models/operations/responsebody.md
-  - docs/models/operations/getdeploymentidinputsresponse.md
-  - docs/models/operations/environment.md
-  - docs/models/operations/getdeploymentrequest.md
-  - docs/models/operations/getdeploymentresponsebody.md
-  - docs/models/operations/getdeploymentcomfyuiresponsebody.md
-  - docs/models/operations/getdeploymentresponse.md
-  - docs/models/operations/gputype.md
-  - docs/models/operations/wsgputype.md
-  - docs/models/operations/eventtype.md
-  - docs/models/operations/gpuprovider.md
-  - docs/models/operations/postgpueventrequestbody.md
-  - docs/models/operations/postgpueventmachinesresponsebody.md
-  - docs/models/operations/postgpueventresponsebody.md
-  - docs/models/operations/postgpueventresponse.md
-  - docs/models/operations/fields_.md
-  - docs/models/operations/getv1machinesrequest.md
-  - docs/models/operations/getv1machinesmachinesresponsebody.md
-  - docs/models/operations/machines.md
-  - docs/models/operations/getv1machinesresponsebody.md
-  - docs/models/operations/getv1machinesresponse.md
-  - docs/models/operations/postv1machinesrequestbody.md
-  - docs/models/operations/postv1machinesmachinesresponsebody.md
-  - docs/models/operations/postv1machinestype.md
-  - docs/models/operations/postv1machinesstatus.md
-  - docs/models/operations/postv1machinesgpu.md
-  - docs/models/operations/postv1machinesresponsebody.md
-  - docs/models/operations/postv1machinesresponse.md
-  - docs/models/operations/getv1machinesmachineidrequest.md
-  - docs/models/operations/getv1machinesmachineidmachinesresponsebody.md
-  - docs/models/operations/getv1machinesmachineidresponsebody.md
-  - docs/models/operations/getv1machinesmachineidresponse.md
-  - docs/models/shared/security.md
-  - docs/sdks/comfydeploy/README.md
-  - docs/sdks/run/README.md
-  - docs/sdks/files/README.md
-  - docs/sdks/workflows/README.md
-  - docs/sdks/comfyui/README.md
-  - docs/sdks/machines/README.md
-  - USAGE.md
-  - .gitattributes
-  - CONTRIBUTING.md
+examples:
+  runUpdates: {}
+  post_/run:
+    speakeasy-default-post-/run:
+      requestBody:
+        application/json: {"deployment_id": "d290f1ee-6c54-4b01-90e6-d701748f0851", "workflow_api": {}, "workflow_id": "f47ac10b-58cc-4372-a567-0e02b2c3d479", "machine_id": "f47ac10b-58cc-4372-a567-0e02b2c3d479", "inputs": {"input_text": "value1", "input_url": "https://example.png"}, "webhook": "https://example.com/webhook"}
+  get_/run:
+    speakeasy-default-get-/run:
+      parameters:
+        query:
+          run_id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "b888f774-3e7c-4135-a18c-6b985523c4bc", "workflow_version_id": "e50f7622-81da-484b-9c66-1c8a99c6b71b", "workflow_inputs": {}, "workflow_id": "ecd62b8f-7112-4aaf-90ab-4e43b4cca371", "workflow_api": {}, "machine_id": "f620807a-a1f8-4cf0-95d8-9d58ee381f6b", "origin": "public-template", "status": "failed", "ended_at": "<value>", "created_at": "1725350846452", "updated_at": "1739350516940", "queued_at": "<value>", "started_at": "<value>", "gpu_event_id": "<id>", "gpu": "A100-80GB", "machine_version": "<value>", "machine_type": "classic", "modal_function_call_id": "<id>", "user_id": "<id>", "org_id": "<id>", "live_status": "<value>", "progress": 5783.2, "is_realtime": false, "webhook": "<value>", "webhook_status": "failed", "webhook_intermediate_status": true, "batch_id": "1c293683-64a1-45f8-8d7e-75f5179e263c", "favorite": false, "model_id": "<id>"}
+        "400":
+          application/json: {"code": "400", "message": "Workflow not found"}
+        "401": {}
+        "500": {}
+  get_/upload-url:
+    speakeasy-default-get-/upload-url:
+      parameters:
+        query:
+          type: "application/zip"
+          file_size: "<value>"
+  get_/websocket/{deployment_id}:
+    speakeasy-default-get-/websocket/{deployment-id}:
+      parameters:
+        path:
+          deployment_id: "<id>"
+  get_/auth-response/{request_id}:
+    speakeasy-default-get-/auth-response/{request-id}:
+      parameters:
+        path:
+          request_id: "<id>"
+  post_/workflow: {}
+  get_/workflow-version/{version_id}:
+    speakeasy-default-get-/workflow-version/{version-id}:
+      parameters:
+        path:
+          version_id: "<id>"
+  get_/workflow/{id}:
+    speakeasy-default-get-/workflow/{id}:
+      parameters:
+        path:
+          id: "<id>"
+  post_/machine-endpoint: {}
+  post_/v1/workflows: {}
+  get_/v1/workflows: {}
+  get_/v1/workflows/{workflow_id}:
+    speakeasy-default-get-/v1-/workflows/{workflow-id}:
+      parameters:
+        path:
+          workflow_id: "<id>"
+  get_/v1/workflows/{workflow_id}/outputs:
+    speakeasy-default-get-/v1-/workflows/{workflow-id}/outputs:
+      parameters:
+        path:
+          workflow_id: "<id>"
+        query: {}
+  get_/deployment/{id}/inputs:
+    speakeasy-default-get-/deployment/{id}/inputs:
+      parameters:
+        path:
+          id: "<id>"
+  get_/deployment: {}
+  post_/gpu_event: {}
+  post_/end_gpu_event: {}
+  get_/machine/{machine_id}/events:
+    speakeasy-default-get-/machine/{machine-id}/events:
+      parameters:
+        path:
+          machine_id: "<id>"
+        query:
+          status: "running"
+  post_/v1/machines: {}
+  get_/v1/machines: {}
+  get_/v1/machines/{machine_id}:
+    speakeasy-default-get-/v1-/machines/{machine-id}:
+      parameters:
+        path:
+          machine_id: "<id>"
+        query: {}
+examplesVersion: 1.0.0
+generatedTests: {}

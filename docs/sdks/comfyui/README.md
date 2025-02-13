@@ -1,5 +1,7 @@
 # Comfyui
+(*comfyui*)
 
+## Overview
 
 ### Available Operations
 
@@ -7,8 +9,6 @@
 * [post_workflow](#post_workflow) - Upload workflow from ComfyUI
 * [get_workflow_version_version_id_](#get_workflow_version_version_id_) - Get comfyui workflow
 * [get_workflow_id_](#get_workflow_id_) - Get comfyui workflow
-* [get_deployment_id_inputs](#get_deployment_id_inputs) - Get comfyui workflow inputs definition
-* [get_deployment](#get_deployment) - Get all deployed workflows
 
 ## get_auth_response_request_id_
 
@@ -28,7 +28,7 @@ s.config_security(
 )
 
     
-res = s.comfyui.get_auth_response_request_id_(request_id="<value>")
+res = s.comfyui.get_auth_response_request_id_(request_id="<id>")
 
 if ! res.two_hundred_application_json_object.nil?
   # handle response
@@ -42,10 +42,10 @@ end
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `request_id`       | *::String*         | :heavy_check_mark: | N/A                |
 
-
 ### Response
 
 **[T.nilable(::OpenApiSDK::Operations::GetAuthResponseRequestIdResponse)](../../models/operations/getauthresponserequestidresponse.md)**
+
 
 
 ## post_workflow
@@ -68,16 +68,16 @@ s.config_security(
 
 req = ::OpenApiSDK::Operations::PostWorkflowRequestBody.new(
   workflow_api: {
-    "fugiat": ::OpenApiSDK::Operations::WorkflowApi.new(
+    "key": ::OpenApiSDK::Operations::WorkflowApi.new(
       inputs: {
-        "User": "<value>",
+        "key": "<value>",
       },
     ),
   },
   snapshot: ::OpenApiSDK::Operations::Snapshot.new(
     comfyui: "<value>",
     git_custom_nodes: {
-      "foreshorten": ::OpenApiSDK::Operations::GitCustomNodes.new(
+      "key": ::OpenApiSDK::Operations::GitCustomNodes.new(
         hash: "<value>",
         disabled: false,
       ),
@@ -102,10 +102,10 @@ end
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                               | [::OpenApiSDK::Operations::PostWorkflowRequestBody](../../models/operations/postworkflowrequestbody.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
-
 ### Response
 
 **[T.nilable(::OpenApiSDK::Operations::PostWorkflowResponse)](../../models/operations/postworkflowresponse.md)**
+
 
 
 ## get_workflow_version_version_id_
@@ -126,7 +126,7 @@ s.config_security(
 )
 
     
-res = s.comfyui.get_workflow_version_version_id_(version_id="<value>")
+res = s.comfyui.get_workflow_version_version_id_(version_id="<id>")
 
 if ! res.two_hundred_application_json_object.nil?
   # handle response
@@ -140,10 +140,10 @@ end
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `version_id`       | *::String*         | :heavy_check_mark: | N/A                |
 
-
 ### Response
 
 **[T.nilable(::OpenApiSDK::Operations::GetWorkflowVersionVersionIdResponse)](../../models/operations/getworkflowversionversionidresponse.md)**
+
 
 
 ## get_workflow_id_
@@ -164,7 +164,7 @@ s.config_security(
 )
 
     
-res = s.comfyui.get_workflow_id_(id="<value>")
+res = s.comfyui.get_workflow_id_(id="<id>")
 
 if ! res.two_hundred_application_json_object.nil?
   # handle response
@@ -178,84 +178,7 @@ end
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `id`               | *::String*         | :heavy_check_mark: | N/A                |
 
-
 ### Response
 
 **[T.nilable(::OpenApiSDK::Operations::GetWorkflowIdResponse)](../../models/operations/getworkflowidresponse.md)**
-
-
-## get_deployment_id_inputs
-
-Use this to retrieve comfyui workflow inputs definition by id
-
-### Example Usage
-
-```ruby
-require 'comfydeploy'
-
-
-s = ::OpenApiSDK::ComfyDeploy.new
-s.config_security(
-  ::OpenApiSDK::Shared::Security.new(
-    bearer_auth: "<YOUR_BEARER_TOKEN_HERE>",
-  )
-)
-
-    
-res = s.comfyui.get_deployment_id_inputs(id="<value>")
-
-if ! res.response_bodies.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter          | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `id`               | *::String*         | :heavy_check_mark: | N/A                |
-
-
-### Response
-
-**[T.nilable(::OpenApiSDK::Operations::GetDeploymentIdInputsResponse)](../../models/operations/getdeploymentidinputsresponse.md)**
-
-
-## get_deployment
-
-Get all deployed workflows
-
-### Example Usage
-
-```ruby
-require 'comfydeploy'
-
-
-s = ::OpenApiSDK::ComfyDeploy.new
-s.config_security(
-  ::OpenApiSDK::Shared::Security.new(
-    bearer_auth: "<YOUR_BEARER_TOKEN_HERE>",
-  )
-)
-
-    
-res = s.comfyui.get_deployment(environment=::OpenApiSDK::Operations::Environment::STAGING)
-
-if ! res.response_bodies.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `environment`                                                                   | [::OpenApiSDK::Operations::Environment](../../models/operations/environment.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
-
-
-### Response
-
-**[T.nilable(::OpenApiSDK::Operations::GetDeploymentResponse)](../../models/operations/getdeploymentresponse.md)**
 

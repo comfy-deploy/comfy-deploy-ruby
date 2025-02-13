@@ -1,0 +1,12 @@
+# RunUpdatesRequestBody
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `status`                                                                      | [::OpenApiSDK::Webhooks::Status](../../models/webhooks/status.md)             | :heavy_check_mark:                                                            | N/A                                                                           |
+| `live_status`                                                                 | *::String*                                                                    | :heavy_check_mark:                                                            | N/A                                                                           |
+| `progress`                                                                    | *::Float*                                                                     | :heavy_check_mark:                                                            | N/A                                                                           |
+| `run_id`                                                                      | *::String*                                                                    | :heavy_check_mark:                                                            | N/A                                                                           |
+| `outputs`                                                                     | T::Array<[::OpenApiSDK::Webhooks::Outputs](../../models/webhooks/outputs.md)> | :heavy_check_mark:                                                            | N/A                                                                           |
